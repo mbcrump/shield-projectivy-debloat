@@ -9,6 +9,26 @@ This profile was verified on `SHIELD_Android_TV` (`mdarcy`), Android 11, user 0.
 The scripts stop on other devices or Android versions. They do not install
 Projectivy or any streaming app. Install and open Projectivy first.
 
+## Use with an AI assistant
+
+This repo is written so a terminal-capable AI assistant, such as Codex, can
+follow the same documented setup on your behalf. Once ADB is installed and
+authorized, give the assistant this repo URL and your Shield's ADB address.
+For example, you can paste:
+
+> Help me set up my NVIDIA Shield using
+> https://github.com/mbcrump/shield-projectivy-debloat. Read the README and
+> scripts, inspect my device's current state, and use my ADB address
+> `IP:5555` to apply the profile. Preserve Projectivy, streaming apps, and
+> voice search. Reboot, run the verification script, and tell me what changed
+> and how to roll it back. If my device does not match the supported model and
+> Android version, stop and explain before making changes.
+
+The scripts include device checks, a saved pre-change snapshot, verification,
+and rollback steps so the assistant has a clear path from inspection through
+recovery. Replace `IP:5555` with your Shield's address; no private address or
+account details are stored in this repo.
+
 ## Use
 
 Install Android platform tools (`adb`), enable Network debugging on the Shield,
