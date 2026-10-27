@@ -31,6 +31,24 @@ first change. Keep that folder on your computer for rollback. Rerunning
 persistent GameStream process did not return after reboot. It does not test
 microphone input or play video for you.
 
+## Performance measurements
+
+See [BENCHMARKS.md](BENCHMARKS.md) for measurements from the tested Shield and
+their limitations. `benchmark.sh` is read-only and records available RAM,
+running process count, GameStream process presence, and resolved Home activity
+three times, at intervals of at least ten seconds. Run it after the device has
+been idle for at least two minutes
+following a reboot:
+
+```sh
+./benchmark.sh 192.168.1.50:5555 my-profile > my-profile.csv
+```
+
+The published "before" state was reconstructed by reversing this profile,
+because no measurements were captured before the original debloat. The script
+does not switch profiles or reboot the TV; the README's setup and rollback
+commands provide those steps when you want to repeat the comparison.
+
 ## What the profile changes
 
 | Package or setting | Change | Effect |
@@ -106,4 +124,5 @@ snapshot-backed rollback for an exact reversal.
   persistent GameStream process stays stopped and Projectivy starts on its own.
 - Existing streaming apps are left untouched. Their availability and playback
   still depend on each app and its account; test the apps you use after setup.
-- This is a profile of observed package states, not a performance benchmark.
+- The measurements in `BENCHMARKS.md` describe memory and process footprint.
+  They do not establish a change in app playback, frame rate, or UI latency.

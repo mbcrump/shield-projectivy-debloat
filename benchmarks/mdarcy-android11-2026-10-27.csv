@@ -1,0 +1,7 @@
+label,sample,uptime_s,mem_available_kib,process_count,gamecast_running,home_component
+reconstructed_before,1,186.77,1035036,338,1,com.google.android.tvlauncher/.MainActivity
+reconstructed_before,2,231.27,1027348,338,1,com.google.android.tvlauncher/.MainActivity
+reconstructed_before,3,245.24,1026148,338,1,com.google.android.tvlauncher/.MainActivity
+after,1,195.80,1202528,334,0,com.spocky.projengmenu/.ui.home.MainActivity
+after,2,294.29,1188600,334,0,com.spocky.projengmenu/.ui.home.MainActivity
+after,3,349.95,1190220,322,0,com.spocky.projengmenu/.ui.home.MainActivity
